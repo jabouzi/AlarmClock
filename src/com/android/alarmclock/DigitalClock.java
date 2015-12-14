@@ -49,6 +49,7 @@ public class DigitalClock extends LinearLayout {
     private ContentObserver mFormatChangeObserver;
     private boolean mLive = true;
     private boolean mAttached;
+    private Context mContext = getContext();
 
     /* called by system on minute ticks */
     private final Handler mHandler = new Handler();

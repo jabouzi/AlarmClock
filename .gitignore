@@ -1,0 +1,13 @@
+project.properties
+proguard-project.txt
+local.properties
+build.xml
+bin/
+gen/
+app/build
+app.iml
+build.gradle
+.gradle/
+.idea/
+build
+import-summary.txt

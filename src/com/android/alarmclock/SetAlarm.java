@@ -30,6 +30,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -113,11 +114,11 @@ public class SetAlarm extends PreferenceActivity
 
         // Grab the content view so we can modify it.
         FrameLayout content = (FrameLayout) getWindow().getDecorView()
-                .findViewById(com.android.internal.R.id.content);
+                .findViewById(android.R.id.content);
 
         // Get the main ListView and remove it from the content view.
         ListView lv = getListView();
-        content.removeView(lv);
+		((ViewGroup)lv.getParent()).removeView(lv);
 
         // Create the new LinearLayout that will become the content view and
         // make it vertical.
